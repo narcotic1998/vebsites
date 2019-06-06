@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>{{title}}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'personal/css/topnav1.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'personal/css/style1.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	{% if messages %}
+	<center>
+	   {% for message in messages %}
+		   <script>
+			 alert("{{message}}");
+		 </script>
+	   {% endfor %}
+	</center>
+	{% endif %}
+	<font class="header" align="right">
+	<b><h3>Welcome {{user}}!!</h3></b>
+ <b><h6>Last Login : {{user.last_login}}  IST</h6></b>
+</font>
+<div class="topnav" id="myTopnav">
+  	<a class="{{dashboard}}" href="/accounts/profile"><i class="fa fa-fw fa-dashboard fa-1x"></i> Dashboard</a>
+		<a class="{{info}}" href="/accounts/profile/info"><i class="fa fa-fw fa-user-circle-o fa-1x"></i> My Account</a>
+		<div class="topnav-right">
+    	<a class="{{logout}}" href="/accounts/logout">Logout <i class="fa fa-sign-out fa-1x"></i></a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+	</div>
+</div>
+{% block content %}
+{% endblock %}
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>{{title}}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'personal/css/topnav.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>
+	alert.('{{messages}}');
+	function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+	</script>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a class="{{home}}" href="/"><i class="fa fa-fw fa-home fa-1x"></i> Home</a>
+  <a class="{{blog}}" href="/blog"><i class="fa fa-newspaper-o fa-1x"></i> Blog</a>
+  <a class="{{contact}}" href="/contact"><i class="fa fa-fw fa-envelope fa-1x"></i> Contact</a>
+	<div class="topnav-right" id="myTop">
+    <a class="{{login}}" href="/accounts/login">Login <i class="fa fa-sign-in fa-1x"></i></a>
+		<a class="{{register}}" href="/accounts/register">Register <i class="fa fa-user-plus"></i></a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+	</div>
+</div>
+	{% if messages %}
+	<center>
+	   {% for message in messages %}
+		   <script>
+			 alert("{{message}}");
+		 </script>
+	   {% endfor %}
+	</center>
+	{% endif %}<br><br><br>
+{% block content %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends "personal/header.html" %}
+{% block content %}
+{% if user.is_authenticated %}
+<script>
+  alert('You are already Logged in');
+  window.location='/accounts/profile'
+  </script>
+{% else %}
+<br><br>
+<div class="box">
+<form class="" method="post">
+  {% csrf_token %}
+  <h1>Login</h1>
+  <input type="text" name="username" placeholder="Username">
+  <input type="password" name="password" placeholder="Password">
+  <input type="submit" name="" value="Login">
+  <a href="/accounts/forgot_password">forgot password</a>
+</form>
+<div>
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "personal/header_accounts.html" %}
+{% block content %}
+<div class="container">
+<form method = "post">
+    {% csrf_token %}
+    <br><br><br>
+    {{ form.first_name.label }} :
+    {{ form.first_name }}<br><br>
+    {{ form.last_name.label }} :
+    {{ form.last_name }}<br><br>
+    {{ form.email.label }} :
+    {{ form.email }}<br><br>
+  <center> <button type="submit">Update</button> </center>
+</form>
+</div>
+{% endblock %}

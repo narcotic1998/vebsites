@@ -1,0 +1,14 @@
+{% extends "personal/header_accounts.html" %}
+{% block content %}
+<center>
+<h5>Username:  {{user}}</h5>
+<h5> First name:  {{user.first_name}} </h5>
+<h5> Last name:  {{user.last_name}} </h5>
+<h5> Email ID    :<a href='mailto:{{user.email}}'>  {{user.email}}</a> </h5>
+<h5> Date Joined  : {{user.date_joined}} </h5><br>
+<input type="submit" value="Edit Profile"
+    onclick="window.location='/accounts/profile/edit';">&emsp;
+    <input type="submit" value="Change Password"
+    		    onclick="window.location='/accounts/password';">
+</center>
+{% endblock %}
