@@ -16,15 +16,20 @@
 
 <div class="topnav" id="myTopnav">
 	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-		<i class="fa fa-bars"></i>
+		<i class="fa fa-bars"></i></a>
 	<a class="{{home}}" href="/"><i class="fa fa-home fa-1x"></i> Vebsites</a>
   <a class="{{contact}}" href="/contact"><i class="fa fa-fw fa-envelope fa-1x"></i> Contact us</a>
 	<div class="topnav-right">
 	<a class="{{login}}" href="/accounts/login">Login <i class="fa fa-sign-in fa-1x"></i></a>
 	<a class="{{register}}" href="/accounts/register">Register <i class="fa fa-user-plus"></i></a>
 </div>
-	<input type="text" name="search" placeholder="search"><i class="fa fa-search fa-2x" onclick="window.location='/accounts/login'"></i>
-	</a>
+
+	<div class="search-box">
+			<input type="text" name="" class="search-txt" placeholder="search"/>
+			<a class="search-btn" href="#">
+			<i class="fa fa-search"></i>
+			</a>
+		</div>
 </div>
 {% if messages %}
    {% for message in messages %}
