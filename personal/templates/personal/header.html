@@ -15,14 +15,15 @@
 <body>
 
 <div class="topnav" id="myTopnav">
-	<a class="{{home}}" href="/"><i class="fa fa-fw fa-home fa-1x"></i> Home</a>
-	<a class="{{blog}}" href="/blog"><i class="fa fa-newspaper-o fa-1x"></i> Blog</a>
-  <a class="{{contact}}" href="/contact"><i class="fa fa-fw fa-envelope fa-1x"></i> Contact</a>
-	<a class="{{login}}" href="/accounts/login">Login <i class="fa fa-sign-in fa-1x"></i></a>
-	<a class="{{register}}" href="/accounts/register">Register <i class="fa fa-user-plus"></i></a>
-	<input type="text" placeholder="search"><button><i class="fa fa-search fa-1x"></i></button>
 	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		<i class="fa fa-bars"></i>
+	<a class="{{home}}" href="/"> Vebsites</a>
+  <a class="{{contact}}" href="/contact"><i class="fa fa-fw fa-envelope fa-1x"></i> Contact us</a>
+	<div class="topnav-right">
+	<a class="{{login}}" href="/accounts/login">Login <i class="fa fa-sign-in fa-1x"></i></a>
+	<a class="{{register}}" href="/accounts/register">Register <i class="fa fa-user-plus"></i></a>
+</div>
+	<input type="text" name="search" placeholder="search"><i class="fa fa-search fa-1x" onclick="window.location='/accounts/login'"></i>
 	</a>
 </div>
 {% if messages %}
