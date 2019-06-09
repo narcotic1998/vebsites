@@ -75,7 +75,6 @@ body{
   top: 20%;
   left: 10%;
 }
-
 .online-shopping{
   border: none;
   outline: none;
@@ -111,7 +110,7 @@ body{
   .search-box:hover{
     background: white;
     position: absolute;
-    right: 200px;
+    right: 210px;
   }
   .search-box:hover > .search-txt{
     width: 150px;
@@ -142,8 +141,6 @@ body{
   .search-box > .search-btn > i{
     font-size: 25px;
   }
-
-
 }
 
 @media screen and (max-width: 600px) {
@@ -161,9 +158,9 @@ body{
   float: left;
   }
   .topnav-right
-{
-  float: left;
-}
+  {
+    float: left;
+  }
   .topnav.responsive a {
     float: none;
     display: block;
