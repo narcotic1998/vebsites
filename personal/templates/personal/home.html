@@ -1,7 +1,8 @@
 {% extends "personal/header.html" %}
+{% load staticfiles %}
 {% block content %}
-    <center>
-        <h4><p>Hey there, Welcome to my website!! </p></h4>
-
-{% include "personal/includes/htmlsnippet.html" %}
+<div class="content" onclick="window.location='/accounts/profile';">
+  <img class="online-shopping" src="{% static 'personal/img/online shopping.jpeg' %}">
+  <p class="centered">Online Shopping</p>
+  </div>
 {% endblock %}
