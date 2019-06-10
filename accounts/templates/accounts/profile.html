@@ -1,6 +1,8 @@
 {% extends "personal/header_accounts.html" %}
+{% load staticfiles %}
 {% block content %}
-<center>
-<h5>*Nothing to show here!!*</h5>
-</center>
+<div class="content" onclick="window.location='/vebsites/online-shopping';">
+  <img class="online-shopping" src="{% static 'personal/img/online shopping.jpeg' %}">
+  <p class="centered">Online Shopping</p>
+  </div>
 {% endblock %}

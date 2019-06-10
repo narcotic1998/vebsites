@@ -18,22 +18,29 @@
 	   {% endfor %}
 	</center>
 	{% endif %}
+{% if user.is_authenticated %}
 	<font class="header" align="right">
-	<b><h3>Welcome {{user}}!!</h3></b>
- <b><h6>Last Login : {{user.last_login}}  IST</h6></b>
-</font>
-<div class="topnav" id="myTopnav">
-  	<a class="{{dashboard}}" href="/accounts/profile"><i class="fa fa-fw fa-dashboard fa-1x"></i> Dashboard</a>
-		<a class="{{info}}" href="/accounts/profile/info"><i class="fa fa-fw fa-user-circle-o fa-1x"></i> My Account</a>
-		<div class="topnav-right">
-    	<a class="{{logout}}" href="/accounts/logout">Logout <i class="fa fa-sign-out fa-1x"></i></a>
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		<b><h3>Welcome {{user}}!!</h3></b>
+	 	<b><h6>Last Login : {{user.last_login}}  IST</h6></b>
+	</font>
+	<div class="topnav" id="myTopnav">
+	  	<a class="{{dashboard}}" href="/accounts/profile"><i class="fa fa-fw fa-dashboard fa-1x"></i> Dashboard</a>
+			<a class="{{info}}" href="/accounts/profile/info"><i class="fa fa-fw fa-user-circle-o fa-1x"></i> My Account</a>
+			<div class="topnav-right">
+	    	<a class="{{logout}}" href="/accounts/logout">Logout <i class="fa fa-sign-out fa-1x"></i></a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 				<i class="fa fa-bars"></i>
-			</a>
+				</a>
+		</div>
 	</div>
-</div>
 {% block content %}
 {% endblock %}
+{% else %}
+<script>
+alert("You are not Logged in ");
+window.location="/accounts/login";
+</script>
+{% endif %}
 <script>
 function myFunction() {
   var x = document.getElementById("myTopnav");

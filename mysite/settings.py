@@ -33,6 +33,8 @@ ALLOWED_HOSTS = ["naren98.pythonanywhere.com",'localhost']
 INSTALLED_APPS = [
     'personal',
     'blog',
+    'vebsites',
+    'onlineshopping',
     'accounts',
     'django.contrib.admin',
     'django.contrib.auth',

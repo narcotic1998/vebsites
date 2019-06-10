@@ -68,41 +68,7 @@ body{
 .topnav .icon {
   display: none;
 }
-.content{
-  border-radius: 20px;
-  width: 20%;
-  position: absolute;
-  top: 20%;
-  left: 10%;
-}
-.online-shopping{
-  border: none;
-  outline: none;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  filter: blur(0.6px);
-}
-.centered{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: #FAFAFA;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  transform: translate(-50%, -50%);
-}
 @media not all and (pointer: coarse){
-  .content:hover{
-    width: 400px;
-    height: auto;
-  }
-  .content:hover > .online-shopping{
-    width: 400px;
-    height: auto;
-  }
   .topnav a:hover {
     background-color: #ddd;
     color: black;
@@ -146,7 +112,7 @@ body{
   }
 }
 
-@media screen and (max-width: 600px) and (hover:none) {
+@media screen and (max-width: 600px){
   .topnav a {display: none;}
   .topnav a.active {display: block;}
   .topnav a.icon {
@@ -155,7 +121,7 @@ body{
   }
 }
 
-@media screen and (max-width: 600px) and (hover:none) {
+@media screen and (max-width: 600px) {
   .topnav.responsive { position: fixed;}
   .topnav.responsive .icon {
   float: left;
@@ -188,24 +154,6 @@ body{
     font-size: 25px;
   }
 }
-@media screen and (max-width: 600px){
-  .content{
-    width: 100%;
-    max-width: 600px;
-    height:auto;
-    position:relative;
-    left: 0;
-    border-radius: 0px;
-    border: 1px;
-  }
-  .online-shopping{
-    border-radius: 0px;
-    border: 1px;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-}
 @media screen and (orientation:landscape) and (min-width:600px) and (hover:none) {
   .search-box{
     position: fixed;
@@ -225,16 +173,6 @@ body{
     display: flex;
   }
   .search-box > .search-btn > i{
-    display: flex;
     font-size: 25px;
   }
-  .content{
-    width: 30%;
-    position: relative;
-    left: 4%;
-  }
-  .centered{
-    font-size: 20px;
-  }
-
 }
