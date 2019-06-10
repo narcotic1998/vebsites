@@ -121,11 +121,14 @@ body{
     color: black;
   }
 }
+@media (min-width) and (hover:none) {
+
+}
 @media screen and (max-width: 600px){
   .search-box{
     position: fixed;
     top: 2px;
-    right:0;
+    right:0%;
     background: white;
   }
   .search-box > .search-txt{
@@ -143,7 +146,7 @@ body{
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) and (hover:none) {
   .topnav a {display: none;}
   .topnav a.active {display: block;}
   .topnav a.icon {
@@ -152,7 +155,7 @@ body{
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) and (hover:none) {
   .topnav.responsive { position: fixed;}
   .topnav.responsive .icon {
   float: left;
@@ -202,4 +205,36 @@ body{
     max-width: 100%;
     height: auto;
   }
+}
+@media screen and (orientation:landscape) and (min-width:600px) and (hover:none) {
+  .search-box{
+    position: fixed;
+    top: 2px;
+    right:200px;
+    background: white;
+    height: auto;
+  }
+  .search-box > .search-txt{
+    width: 90px;
+    padding-top: 5px;
+    line-height: 30px;
+    color: black;
+  }
+  .search-box > .search-btn{
+    color: black;
+    display: flex;
+  }
+  .search-box > .search-btn > i{
+    display: flex;
+    font-size: 25px;
+  }
+  .content{
+    width: 30%;
+    position: relative;
+    left: 4%;
+  }
+  .centered{
+    font-size: 20px;
+  }
+
 }
