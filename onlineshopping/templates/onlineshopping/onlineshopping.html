@@ -1,3 +1,39 @@
 {% extends 'personal/header_accounts.html' %}
 {% block content %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'onlineshopping/css/onlineshopping.css' %}" type = "text/css"/>
+<div class="content">
+  <div class="col" onclick="window.location='/vebsites/online-shopping/';">
+    <img class="content-img" src="{% static 'onlineshopping/img/electronics.jpg' %}">
+    <span class="electronics">ELECTRONICS</span>
+    </div>
+  <div class="col" onclick="window.location='/vebsites/online-shopping/';">
+    <img class="content-img" src="{% static 'onlineshopping/img/fashion.png' %}">
+    <span class="fashion">FASHION</span>
+    </div>
+  <div class="col" onclick="window.location='/vebsites/online-shopping/';">
+    <img class="content-img" src="{% static 'onlineshopping/img/homeappliances.jpg' %}">
+    <span class="homeappliances">HOME APPLIANCES</span>
+    </div>
+  <div class="col" onclick="window.location='/vebsites/online-shopping/';">
+    <img class="content-img" src="{% static 'onlineshopping/img/babycare.jpg' %}">
+    <span class="babycare">BABY CARE</span>
+    </div>
+  <div class="col" onclick="window.location='/vebsites/online-shopping/';">
+    <img class="content-img" src="{% static 'onlineshopping/img/books.jpg' %}">
+    <span class="books">BOOKS</span>
+    </div>
+  <div class="col" onclick="window.location='/vebsites/online-shopping/';">
+    <img class="content-img" src="{% static 'onlineshopping/img/jewellery.jpg' %}">
+    <span class="jewellery">JEWELLERY</span>
+    </div>
+  <div class="col" onclick="window.location='/vebsites/online-shopping/';">
+    <img class="content-img" src="{% static 'onlineshopping/img/gifts.jpg' %}">
+    <span class="gifts">GIFTS</span>
+    </div>
+  <div class="col" onclick="window.location='/vebsites/online-shopping/';">
+    <img class="content-img" src="{% static 'onlineshopping/img/foods.jpg' %}">
+    <span class="foods">FOODS AND BEVERAGES</span>
+    </div>
+</div>
 {% endblock %}

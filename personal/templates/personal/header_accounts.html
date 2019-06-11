@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
 	<link rel="stylesheet" href="{% static 'personal/css/topnav1.css' %}" type = "text/css"/>
 	<link rel="stylesheet" href="{% static 'vebsites/css/content.css' %}" type = "text/css"/>
+	
 	<link rel="stylesheet" href="{% static 'personal/css/style1.css' %}" type = "text/css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -25,7 +26,7 @@
 	 	<b><h6>Last Login : {{user.last_login}}  IST</h6></b>
 	</font>
 	<div class="topnav" id="myTopnav">
-	  	<a class="{{dashboard}}" href="/accounts/profile"><i class="fa fa-fw fa-dashboard fa-1x"></i> Dashboard</a>
+	  	<a class="vebsites" href="/accounts/profile"> Vebsites</a>
 			<a class="{{info}}" href="/accounts/profile/info"><i class="fa fa-fw fa-user-circle-o fa-1x"></i> My Account</a>
 			<div class="topnav-right">
 	    	<a class="{{logout}}" href="/accounts/logout">Logout <i class="fa fa-sign-out fa-1x"></i></a>
