@@ -1,3 +1,8 @@
+{% if user.is_authenticated %}
+<script>
+	window.location="/accounts/profile";
+</script>
+{% endif %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,12 +15,8 @@
 <link rel="stylesheet" href="{% static 'personal/css/topnav.css' %}" type = "text/css"/>
 <link rel="stylesheet" href="{% static 'vebsites/css/content.css' %}" type = "text/css"/>
 <link rel="stylesheet" href="{% static 'personal/css/style1.css' %}" type = "text/css"/>
-<style>
-
-</style>
 </head>
 <body>
-
 <div class="topnav" id="myTopnav">
 	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		<i class="fa fa-bars"></i></a>
