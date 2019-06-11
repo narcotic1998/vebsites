@@ -117,7 +117,7 @@ body{
 
 @media screen and (max-width: 600px){
   .topnav a {display: none;}
-  .topnav a.active {display: block;}
+  .topnav a.vebsites {display: block; float: left;}
   .topnav a.icon {
     float: left;
     display: block;
@@ -136,32 +136,20 @@ body{
   .topnav.responsive a {
     float: none;
     display: block;
-    text-align:justify;
+    text-align:left;
   }
-  .topnav.responsive > .search-box {
-    position: fixed;
-    top: 2px;
-    right:0px;
+  .topnav.responsive a.vebsites{
+    text-align: center;
   }
-  .topnav.responsive > .search-box > .search-txt{
-    width: 90px;
-    padding-top: 5px;
-    line-height: 30px;
-    color: black;
-  }
-  .topnav.responsive > .search-box > .search-btn{
-    color: black;
-    display: flex;
-  }
-  .topnav.responsive > .search-box > .search-btn > i{
-    font-size: 25px;
+  .topnav.responsive > .search-box{
+    display: none;
   }
 }
 @media screen and (orientation:landscape) and (min-width:600px) and (hover:none) {
   .search-box{
     position: fixed;
     top: 2px;
-    right:200px;
+    right:220px;
     background: white;
     height: auto;
   }
