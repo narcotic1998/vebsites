@@ -1,5 +1,5 @@
 body{
-  margin-top: 60px;
+  margin-top: 57px;
 }
 .topnav{
   background-color: #333;
@@ -25,7 +25,7 @@ body{
   height: 50px;
   padding: 5px;
   top: 1%;
-  right: 210px;
+  right: 16%;
 }
 
 .search-txt{
@@ -68,7 +68,7 @@ body{
 .topnav .icon {
   display: none;
 }
-@media not all and (pointer: coarse){
+@media not all and (pointer:coarse){
   .topnav a:hover {
     background-color: #ddd;
     color: black;
@@ -76,10 +76,10 @@ body{
   .search-box:hover{
     background: white;
     position: absolute;
-    right: 210px;
+    right: 16vw;
   }
   .search-box:hover > .search-txt{
-    width: 150px;
+    width: 15vw;
     color: black;
   }
   .search-box:hover > .search-btn{
@@ -87,28 +87,31 @@ body{
     color: black;
   }
 }
-@media (min-width) and (hover:none) {
-
-}
 @media screen and (max-width: 600px){
   .search-box{
-    position: fixed;
-    top: 2px;
-    right:0%;
+    position: absolute;
+    top: 3px;
+    left: 70%;
+    width: 30vw;
+    height: 45px;
     background: white;
   }
   .search-box > .search-txt{
-    width: 90px;
-    padding-top: 5px;
-    line-height: 30px;
+    width: 20vw;
+    padding-top: 4px;
+    line-height: 29px;
     color: black;
   }
   .search-box > .search-btn{
+    position: absolute;
+    top: 0vw;
+    right: 0vw;
     color: black;
     display: flex;
+    float: right;
   }
   .search-box > .search-btn > i{
-    font-size: 25px;
+    font-size:6vw;
   }
 }
 
@@ -121,10 +124,10 @@ body{
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px){
   .topnav.responsive { position: fixed;}
   .topnav.responsive .icon {
-  float: left;
+    float: left;
   }
   .topnav-right
   {
