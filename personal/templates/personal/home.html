@@ -1,30 +1,5 @@
 {% extends "personal/header.html" %}
 {% load staticfiles %}
 {% block content %}
-<div class="content">
-  <div class="col" onclick="window.location='/vebsites/online-shopping';">
-    <img class="content-img" src="{% static 'personal/img/online shopping.jpeg' %}">
-    <span>Online Shopping</span>
-    </div>
-  <div class="col" onclick="window.location='/vebsites/entertainment';">
-    <img class="content-img" src="{% static 'personal/img/entertainment.jpg' %}">
-    <span>Entertainment</span>
-  </div>
-  <div class="col" onclick="window.location='/vebsites/news';">
-    <img class="content-img" src="{% static 'personal/img/news.png' %}">
-    <span>NEWS</span>
-    </div>
-  <div class="col" onclick="window.location='/vebsites/entertainment';">
-    <img class="content-img" src="{% static 'personal/img/entertainment.jpg' %}">
-    <span>Entertainment</span>
-  </div>
-  <div class="col" onclick="window.location='/vebsites/online-shopping';">
-    <img class="content-img" src="{% static 'personal/img/online shopping.jpeg' %}">
-    <span>Online Shopping</span>
-    </div>
-  <div class="col" onclick="window.location='/vebsites/entertainment';">
-    <img class="content-img" src="{% static 'personal/img/entertainment.jpg' %}">
-    <span>Entertainment</span>
-  </div>
-</div>
+{% include 'personal/includes/content.html' %}
 {% endblock %}

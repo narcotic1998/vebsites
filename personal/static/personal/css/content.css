@@ -1,6 +1,7 @@
 html, body {
    height: 95%;
    width: 100%;
+   background: rgba(197, 239, 247, 1);
 }
 * {
   box-sizing: border-box;
@@ -14,7 +15,7 @@ html, body {
   display: grid;
   grid-template-columns:repeat(3,1fr);
   grid-column-gap: .5em;
-  grid-auto-rows: minmax(250px,auto);
+  grid-auto-rows: minmax(42vh,auto);
   justify-items:center;
   align-items: center;
 }
@@ -31,17 +32,20 @@ html, body {
   width: 100%;
   max-width: 400%;
   height: 100%;
-  filter: blur(.7px);
+  filter: blur(2px);
 }
 span{
   position: absolute;
   top: 50%;
   left: 50%;
-  color: #FAFAFA;
+  color: white;
   font-size: 2.4vw;
   font-weight: bold;
   text-align: center;
   transform: translate(-50%, -50%);
+}
+.news,.onlineshopping,.sports,.business{
+  color: black;
 }
 @media not all and (pointer: coarse) and (min-width: 1000px){
   .content > div:hover{
@@ -49,7 +53,7 @@ span{
     height: 100%;
   }
   .content > div:hover > .content-img{
-    filter: blur(2px);
+    filter: blur(0px);
   }
 }
 @media screen and (max-width: 600px){

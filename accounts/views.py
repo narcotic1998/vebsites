@@ -16,8 +16,9 @@ def login_user(request):
             login(request,user)
             return redirect("/accounts/profile")
         else:
+            context = {"username":username,"title":"Login","login":"active"}
             messages.info(request,"Incorrect Username or Password")
-            return redirect("/accounts/login")
+            return render(request,"accounts/login.html",context)
     else:
         context={"login":"active","title":"Login"}
         return render(request,"accounts/login.html",context)
