@@ -2,5 +2,5 @@ from django.conf.urls import url , include
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.online_shopping,name="online_shopping"),
+    url(r'^$', views.online_shopping,name="home"),
 ]

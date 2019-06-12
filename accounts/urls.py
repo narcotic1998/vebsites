@@ -15,7 +15,11 @@ urlpatterns = [
     url(r'^profile/edit$',views.edit_profile,name="edit_profile"),
     url(r'^logout/$',views.logout,name="logout"),
     url(r'^password/$',views.change_password,name="change_password"),
-    url(r'^forgot_password/$',password_reset,{"template_name":"accounts/forgot_password.html"},name='reset-password'),
+    url(
+    r'^forgot_password/$',
+    password_reset,
+    {"template_name":"accounts/forgot_password.html"},name='reset-password'
+    ),
     url(
     r'^password_reset/done/$',
     password_reset_done,

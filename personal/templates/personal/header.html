@@ -1,6 +1,7 @@
 {% if user.is_authenticated %}
 <script>
-	window.location="/accounts/profile";
+	alert("You are Logged in");
+	window.location="{% url 'profile' %}";
 </script>
 {% endif %}
 <!DOCTYPE html>
@@ -21,10 +22,10 @@
 	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		<i class="fa fa-bars"></i></a>
 	<a class="vebsites" href="/"> Vebsites</a>
-  <a class="{{contact}}" href="/contact"><i class="fa fa-fw fa-envelope fa-1x"></i> Contact us</a>
+  <a class="{{contact}}" href="{% url 'contact' %}"><i class="fa fa-fw fa-envelope fa-1x"></i> Contact us</a>
 	<div class="topnav-right">
-	<a class="{{login}}" href="/accounts/login">Login <i class="fa fa-sign-in fa-1x"></i></a>
-	<a class="{{register}}" href="/accounts/register">Register <i class="fa fa-user-plus"></i></a>
+	<a class="{{login}}" href="{% url 'login' %}">Login <i class="fa fa-sign-in fa-1x"></i></a>
+	<a class="{{register}}" href="{% url 'register' %}">Register <i class="fa fa-user-plus"></i></a>
 	<div class="search-box">
 			<input type="text" name="" class="search-txt" placeholder="search"/>
 			<a class="search-btn" href="#">

@@ -26,10 +26,10 @@
 	 	<b><h6>Last Login : {{user.last_login}}  IST</h6></b>
 	</font>
 	<div class="topnav" id="myTopnav">
-	  	<a class="vebsites" href="/accounts/profile"> Vebsites</a>
-			<a class="{{info}}" href="/accounts/profile/info"><i class="fa fa-fw fa-user-circle-o fa-1x"></i> My Account</a>
+	  	<a class="vebsites" href="{% url 'profile' %}"> Vebsites</a>
+			<a class="{{info}}" href="{% url 'info' %}"><i class="fa fa-fw fa-user-circle-o fa-1x"></i> My Account</a>
 			<div class="topnav-right">
-	    	<a class="{{logout}}" href="/accounts/logout">Logout <i class="fa fa-sign-out fa-1x"></i></a>
+	    	<a class="{{logout}}" href="{% url 'logout' %}">Logout <i class="fa fa-sign-out fa-1x"></i></a>
 				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 				<i class="fa fa-bars"></i>
 				</a>
@@ -40,7 +40,7 @@
 {% else %}
 <script>
 alert("You are not Logged in ");
-window.location="/accounts/login";
+window.location="{% url 'login' %}";
 </script>
 {% endif %}
 <script>

@@ -1,27 +1,27 @@
 {% block content %}
 {% load staticfiles %}
 <div class="content">
-  <div class="col" onclick="window.location='/vebsites/online-shopping';">
+  <div class="col" onclick="window.location='{% url 'onlineshopping:home' %}';">
     <img class="content-img" src="{% static 'vebsites/img/onlineshopping.jpg' %}">
     <span class="onlineshopping">ONLINE SHOPPING</span>
     </div>
-  <div class="col" onclick="window.location='/vebsites/entertainment';">
+  <div class="col" onclick="window.location='';">
     <img class="content-img" src="{% static 'vebsites/img/entertainment.jpg' %}">
     <span>ENTERTAINMENT</span>
   </div>
-  <div class="col" onclick="window.location='/vebsites/news';">
+  <div class="col" onclick="window.location='';">
     <img class="content-img" src="{% static 'vebsites/img/news.png' %}">
     <span class="news">NEWS</span>
     </div>
-  <div class="col" onclick="window.location='/vebsites/sports';">
+  <div class="col" onclick="window.location='';">
     <img class="content-img" src="{% static 'vebsites/img/sports.jpg' %}">
     <span class="sports">SPORTS</span>
   </div>
-  <div class="col" onclick="window.location='/vebsites/education';">
+  <div class="col" onclick="window.location='';">
     <img class="content-img" src="{% static 'vebsites/img/education.jpg' %}">
     <span>Education</span>
     </div>
-  <div class="col" onclick="window.location='/vebsites/business';">
+  <div class="col" onclick="window.location='';">
     <img class="content-img" src="{% static 'vebsites/img/business.jpg' %}">
     <span class="business">Business</span>
   </div>
