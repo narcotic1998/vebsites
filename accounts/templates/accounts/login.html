@@ -1,5 +1,7 @@
 {% extends "personal/header.html" %}
 {% block content %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'personal/css/style1.css' %}" type = "text/css"/>
 {% if user.is_authenticated %}
 <script>
   alert('You are already Logged in');
