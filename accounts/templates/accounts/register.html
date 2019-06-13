@@ -14,8 +14,8 @@
     <center><h1>Account Registration</h1></center>
     {% csrf_token %}
     {{form.username}}{{form.errors.username}}
-    {{form.first_name}}
-    {{form.last_name}}
+    {{form.first_name}}{{form.errors.first_name}}
+    {{form.last_name}}{{form.errors.last_name}}
     {{form.email}}{{form.errors.email}}
     {{form.password1}}
     {{form.errors.password2}}

@@ -1,3 +1,4 @@
+import re
 from django import forms
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
@@ -34,8 +35,8 @@ class RegistrationForm(UserCreationForm):
     def clean_password2(self):
         password1 = self.cleaned_data.get('password1')
         password2 = self.cleaned_data.get('password2')
-        first_name=self.cleaned_data['first_name']
-        last_name=self.cleaned_data['last_name']
+        first_name=self.cleaned_data.get('first_name')
+        last_name=self.cleaned_data.get('last_name')
 
         if password1 != password2:
             raise forms.ValidationError("Passwords did not match")
@@ -54,7 +55,7 @@ class RegistrationForm(UserCreationForm):
                 )
         if password1.isdigit():
             raise forms.ValidationError(
-            _('Entirely Numeric'),
+            _("Password can't be entirely numeric"),
             code="Numeric"
             )
 
@@ -71,6 +72,58 @@ class RegistrationForm(UserCreationForm):
             )
         except User.DoesNotExist:
             return email
+
+    def clean_username(self):
+        username = self.cleaned_data['username']
+        regex = re.compile('[@_,.\-/\'/\"/+!#$%^&*()<>?/\\\\|}{~:]')
+        if username.isdigit():
+            raise forms.ValidationError(
+            _("Username can't be entirely numeric"),
+            code="Numeric"
+            )
+        if re.match(r"^(?=.{5,15}$)",username)==None:
+            if len(u)<5:
+                print("less than 5 characters")
+                raise forms.ValidationError(
+                _("Username less than 5 characters"),
+                code="small"
+                )
+            else:
+                raise forms.ValidationError(
+                _("Username more than 15 characters"),
+                code="large"
+                )
+
+        if regex.search(username):
+            raise forms.ValidationError(
+            _("Username can't contain special characters"),
+            code="special characters"
+            )
+
+        if username[0].isdigit():
+            raise forms.ValidationError(
+            _("Username can't start with a number"),
+            code="start with a number"
+            )
+        return username
+
+    def clean_first_name(self):
+        first_name = self.cleaned_data.get('first_name')
+        if any(char.isdigit() for char in first_name):
+            raise forms.ValidationError(
+            _("First name can't contain a number"),
+            code="Numeric"
+            )
+        return first_name
+
+    def clean_last_name(self):
+        last_name = self.cleaned_data.get('last_name')
+        if any(char.isdigit() for char in last_name):
+            raise forms.ValidationError(
+            _("Last name can't contain a number"),
+            code="Numeric"
+            )
+        return last_name
 
     def save(self, commit=True):
         user = super(RegistrationForm, self).save(commit=False)
