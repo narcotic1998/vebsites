@@ -61,13 +61,37 @@
     .box h1{
       font-size: 5vw;
     }
+    #LoginForm{
+      position: absolute;
+      top: 10%;
+      left: 4%;
+    }
     #RegForm{
-      position: relative;
-      top: -8%;
+      position: absolute;
+      top: 2%;
+      left: 6%;
     }
     .box input[type = "text"],.box input[type = "password"],.box input[type = "email"]{ width: 140px;}
     .box input[type = "text"]:focus,.box input[type = "password"]:focus,.box input[type = "email"]:focus{
       width: 170px;
     }
     .box input[type = "submit"]{padding: 10px 25px;}
+}
+@media screen and (orientation:landscape) and (min-width:600px) and (hover:none){
+  #LoginForm{
+    position: absolute;
+    top: 5%;
+    left: 35%;
+  }
+  #RegForm{
+    position: absolute;
+    left: 10%;
+  }
+  .box h1{
+    font-size: 5vw;
+  }
+  .box input[type = "text"],.box input[type = "password"],.box input[type = "email"]{ width: 35vw;}
+  .box input[type = "text"]:focus,.box input[type = "password"]:focus,.box input[type = "email"]:focus{
+    width: 42vw ;
+  }
 }

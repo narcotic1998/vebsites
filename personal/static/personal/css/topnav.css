@@ -1,5 +1,5 @@
 body{
-    margin-top: 8.3vh;
+    margin-top: 55px;
   }
 .topnav{
   background-color: #333;
@@ -144,14 +144,14 @@ body{
 }
 @media screen and (orientation:landscape) and (min-width:600px) and (hover:none) {
   body{
-    margin-top: 10%;
+    margin-top: 50px;
   }
   .search-box{
     position: fixed;
     top: 3px;
     right:220px;
     background: white;
-    height: 12vh;
+    height: 47px;
   }
   .search-box > .search-txt{
     width: 90px;
