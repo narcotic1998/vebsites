@@ -1,6 +1,6 @@
 body{
-  margin-top: 57px;
-}
+    margin-top: 8.3vh;
+  }
 .topnav{
   background-color: #333;
   overflow: hidden;
@@ -138,20 +138,20 @@ body{
     display: block;
     text-align:left;
   }
-  .topnav.responsive a.vebsites{
-    text-align: center;
-  }
   .topnav.responsive > .search-box{
     display: none;
   }
 }
 @media screen and (orientation:landscape) and (min-width:600px) and (hover:none) {
+  body{
+    margin-top: 10%;
+  }
   .search-box{
     position: fixed;
-    top: 2px;
+    top: 3px;
     right:220px;
     background: white;
-    height: auto;
+    height: 12vh;
   }
   .search-box > .search-txt{
     width: 90px;

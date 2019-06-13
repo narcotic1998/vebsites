@@ -6,7 +6,6 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout as django_logout
 from django.urls import reverse
 from django import forms
-from django.forms import ValidationError
 
 def login_user(request):
     username = password = ''

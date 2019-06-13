@@ -1,10 +1,30 @@
 {% extends "personal/header.html" %}
+{% load staticfiles %}
 {% block content %}
-  <form method="post"><br><br>
-    <h2>Account Registration</h2>
+<link rel="stylesheet" href="{% static 'personal/css/style1.css' %}" type = "text/css"/>
+
+<style>
+.progress{
+  display: none;
+}
+
+</style>
+<div class="box" id ="RegForm">
+  <form class="" method="post"><br><br>
+    <center><h1>Account Registration</h1></center>
     {% csrf_token %}
-    {{ form.as_p }}
-    {{ form.media }}
+    {{form.username}}{{form.errors.username}}
+    {{form.first_name}}
+    {{form.last_name}}
+    {{form.email}}{{form.errors.email}}
+    {{form.password1}}
+    {{form.errors.password2}}
+    {{form.password2}}
     <center><button type="submit">Register</button></center>
   </form>
+  </div>
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="/static/zxcvbn_password/js/zxcvbn.js"></script>
+<script type="text/javascript" src="{% static 'accounts/js/password_strength.js' %}"></script>
 {% endblock %}

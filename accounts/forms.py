@@ -7,15 +7,18 @@ from django.utils.translation import ugettext as _
 from django.contrib.auth.forms import (
 UserCreationForm,UserChangeForm,AuthenticationForm
 )
+from zxcvbn_password import zxcvbn
+from zxcvbn_password.widgets import PasswordStrengthInput, PasswordConfirmationInput
 
 YEARS =[x for x in range(1950,2002)]
 
 class RegistrationForm(UserCreationForm):
-    username = forms.CharField(max_length=15,help_text=None)
-    first_name = forms.CharField(required=True)
-    email = forms.EmailField(required=True)
-    password1 = forms.CharField(widget=PasswordStrengthInput(),help_text=None)
-    password2 = forms.CharField(widget=PasswordStrengthInput(),help_text=None)
+    username = forms.CharField(max_length=50,widget=forms.TextInput(attrs={'placeholder': 'Username'}))
+    first_name = forms.CharField(required=True,widget=forms.TextInput(attrs={'placeholder': 'First name'}))
+    last_name = forms.CharField(required=True,widget=forms.TextInput(attrs={'placeholder': 'Last name'}))
+    email = forms.EmailField(required=True,widget=forms.TextInput(attrs={'placeholder': 'Email'}))
+    password1 = forms.CharField(label="Password",widget=PasswordStrengthInput(attrs={'placeholder': 'Password'}))
+    password2 = forms.CharField(label="Password",widget=PasswordConfirmationInput(attrs={'placeholder': 'Re-enter Password'},confirm_with='password1'))
 
     class Meta:
         model = User
@@ -27,6 +30,36 @@ class RegistrationForm(UserCreationForm):
             'password1',
             'password2'
         ]
+
+    def clean_password2(self):
+        password1 = self.cleaned_data.get('password1')
+        password2 = self.cleaned_data.get('password2')
+        first_name=self.cleaned_data['first_name']
+        last_name=self.cleaned_data['last_name']
+
+        if password1 != password2:
+            raise forms.ValidationError("Passwords did not match")
+
+        if len(password1)<8:
+            raise forms.ValidationError(
+            _('Password should be atleast 8 characters'),
+            code="Too Small"
+            )
+        if password1:
+            score = zxcvbn(password1,[first_name,last_name])['score']
+            if score < 3:
+                raise forms.ValidationError(
+                _('Try a Strong Password'),
+                code="Too Weak"
+                )
+        if password1.isdigit():
+            raise forms.ValidationError(
+            _('Entirely Numeric'),
+            code="Numeric"
+            )
+
+        return password2
+
     def clean_email(self):
         email = self.cleaned_data['email']
         try:
