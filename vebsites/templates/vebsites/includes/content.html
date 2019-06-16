@@ -1,19 +1,19 @@
 {% block content %}
 {% load staticfiles %}
-<link rel="stylesheet" href="{% static 'vebsites/css/content.css' %}" type = "text/css"/>
+<link rel="stylesheet" href="{% static 'vebsites/css/content.css' %}" type="text/css" />
 <div class="content">
   <div class="col" onclick="window.location='{% url 'onlineshopping:home' %}';">
     <img class="content-img" src="{% static 'vebsites/img/onlineshopping.jpg' %}">
     <span class="centered">ONLINE SHOPPING</span>
-    </div>
+  </div>
   <div class="col" onclick="window.location='';">
     <img class="content-img" src="{% static 'vebsites/img/entertainment.jpg' %}">
-    <span class ="centered">ENTERTAINMENT</span>
+    <span class="centered">ENTERTAINMENT</span>
   </div>
   <div class="col" onclick="window.location='';">
     <img class="content-img" src="{% static 'vebsites/img/news.png' %}">
     <span class="centered">NEWS</span>
-    </div>
+  </div>
   <div class="col" onclick="window.location='';">
     <img class="content-img" src="{% static 'vebsites/img/sports.jpg' %}">
     <span class="centered">SPORTS</p>
@@ -21,7 +21,7 @@
   <div class="col" onclick="window.location='';">
     <img class="content-img" src="{% static 'vebsites/img/education.jpg' %}">
     <span class="centered">Education</span>
-    </div>
+  </div>
   <div class="col" onclick="window.location='';">
     <img class="content-img" src="{% static 'vebsites/img/business.jpg' %}">
     <span class="centered">Business</span>

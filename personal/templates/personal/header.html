@@ -1,61 +1,64 @@
 {% if user.is_authenticated %}
 <script>
 	alert("You are Logged in");
-	window.location="{% url 'profile' %}";
+	window.location = "{% url 'profile' %}";
 </script>
 {% endif %}
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>{{ title }}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="viewport" content="height=device-height, initial-scale=1">
-{% load staticfiles %}
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script type="text/javascript" src="{% static 'personal/js/bootstrap.min.js' %}"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="{% static 'personal/css/topnav.css' %}" type = "text/css"/>
-{% block js %}
-{% endblock %}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="height=device-height, initial-scale=1">
+	{% load staticfiles %}
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script type="text/javascript" src="{% static 'personal/js/bootstrap.min.js' %}"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{% static 'personal/css/topnav.css' %}" type="text/css" />
+	{% block js %}
+	{% endblock %}
 </head>
+
 <body>
-<div class="topnav" id="myTopnav">
-	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-		<i class="fa fa-bars"></i></a>
-	<a class="vebsites" href="/"> Vebsites</a>
-  <a class="{{contact}}" href="{% url 'contact' %}"><i class="fa fa-fw fa-envelope fa-1x"></i> Contact us</a>
-	<div class="topnav-right">
-	<a class="{{login}}" href="{% url 'login' %}">Login <i class="fa fa-sign-in fa-1x"></i></a>
-	<a class="{{register}}" href="{% url 'register' %}">Register <i class="fa fa-user-plus"></i></a>
-	<div class="search-box">
-			<input type="text" name="" class="search-txt" placeholder="search"/>
-			<a class="search-btn" href="#">
-			<i class="fa fa-search"></i>
-			</a>
+	<div class="topnav" id="myTopnav">
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i></a>
+		<a class="vebsites" href="/"> Vebsites</a>
+		<a class="{{contact}}" href="{% url 'contact' %}"><i class="fa fa-fw fa-envelope fa-1x"></i> Contact us</a>
+		<div class="topnav-right">
+			<a class="{{login}}" href="{% url 'login' %}">Login <i class="fa fa-sign-in fa-1x"></i></a>
+			<a class="{{register}}" href="{% url 'register' %}">Register <i class="fa fa-user-plus"></i></a>
+			<div class="search-box">
+				<input type="text" name="" class="search-txt" placeholder="search" />
+				<a class="search-btn" href="#">
+					<i class="fa fa-search"></i>
+				</a>
+			</div>
 		</div>
-</div>
-</div>
-{% if messages %}
-   {% for message in messages %}
-	   <script>
-		 alert("{{message}}");
-	 </script>
-   {% endfor %}
-{% endif %}
-{% block content %}
-{% endblock %}
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+	</div>
+	{% if messages %}
+	{% for message in messages %}
+	<script>
+		alert("{{message}}");
+	</script>
+	{% endfor %}
+	{% endif %}
+	{% block content %}
+	{% endblock %}
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
 
 </body>
+
 </html>

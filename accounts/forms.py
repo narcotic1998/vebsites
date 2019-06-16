@@ -114,6 +114,11 @@ class RegistrationForm(UserCreationForm):
             _("First name can't contain a number"),
             code="Numeric"
             )
+        if regex.search(first_name):
+            raise forms.ValidationError(
+            _("First name can't contain special characters"),
+            code="special characters"
+            )
         return first_name
 
     def clean_last_name(self):
@@ -123,7 +128,12 @@ class RegistrationForm(UserCreationForm):
             _("Last name can't contain a number"),
             code="Numeric"
             )
-        return last_name
+        if regex.search(last_name):
+            raise forms.ValidationError(
+            _("Last name can't contain special characters"),
+            code="special characters"
+            )
+        return last_nameUsername
 
     def save(self, commit=True):
         user = super(RegistrationForm, self).save(commit=False)
