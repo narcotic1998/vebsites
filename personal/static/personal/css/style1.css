@@ -8,11 +8,6 @@
   background: inherit;
   text-align: center;
 }
-#RegForm{
-  position: absolute;
-  top: -5%;
-  left: 25%;
-}
 .box h1{
   color: black;
   text-transform: uppercase;

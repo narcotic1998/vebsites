@@ -109,6 +109,7 @@ class RegistrationForm(UserCreationForm):
 
     def clean_first_name(self):
         first_name = self.cleaned_data.get('first_name')
+        regex = re.compile('[@_,.\-/\'/\"/+!#$%^&*()<>?/\\\\|}{~:]')
         if any(char.isdigit() for char in first_name):
             raise forms.ValidationError(
             _("First name can't contain a number"),
@@ -123,6 +124,7 @@ class RegistrationForm(UserCreationForm):
 
     def clean_last_name(self):
         last_name = self.cleaned_data.get('last_name')
+        regex = re.compile('[@_,.\-/\'/\"/+!#$%^&*()<>?/\\\\|}{~:]')
         if any(char.isdigit() for char in last_name):
             raise forms.ValidationError(
             _("Last name can't contain a number"),
@@ -133,7 +135,7 @@ class RegistrationForm(UserCreationForm):
             _("Last name can't contain special characters"),
             code="special characters"
             )
-        return last_nameUsername
+        return last_name
 
     def save(self, commit=True):
         user = super(RegistrationForm, self).save(commit=False)
@@ -158,10 +160,10 @@ class EditProfileForm(UserChangeForm):
         ]
 
 class ProfileForm(forms.ModelForm):
-    birth_date = forms.DateField(required=False,initial="01-01-1950",
+    birth_date = forms.DateField(label="Birth Date",required=False,initial="01-01-1950",
     widget=forms.SelectDateWidget(years=YEARS),
     )
-
+    gender = forms.CharField(label="Gender",required=False,widget=forms.RadioSelect(choices=[('male','Male'),('female','Female')]))
     class Meta:
         model = Profile
         fields = [

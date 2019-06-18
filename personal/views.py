@@ -5,4 +5,4 @@ def index(request):
     return render(request, 'personal/home.html',context)
 def contact(request):
     context = {"contact":"active","title":"Contact"}
-    return render(request, 'personal/basic.html',context)
+    return render(request, 'personal/contact.html',context)

@@ -47,7 +47,7 @@ $(function($) {
 
         timer = setTimeout(function(){
             match_passwords(password_field);
-        }, 400);
+        }, 100);
     });
 
     $('.password_strength').on('keyup', function() {
