@@ -2,7 +2,6 @@
 	width: 100%;
 	position: relative;
 	text-align: center;
-	top: 15%;
 
 }
 .contact-method{
@@ -14,6 +13,7 @@
 	color: #fff;
 	position: relative;
 	cursor: pointer;
+	z-index: 1;
 }
 .contact-method i{
 	position: absolute;

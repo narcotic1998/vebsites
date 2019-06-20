@@ -1,6 +1,5 @@
 .content{
   position: relative;
-  top: 5%;
   left: 1%;
   width: 95%;
   height: 45%;
@@ -11,7 +10,7 @@
   justify-items:center;
   align-items: center;
 }
-.content > div{
+.col{
   border-radius: 20px;
   width: 80%;
   height: 80%;
@@ -26,7 +25,7 @@
   height: 100%;
   filter: blur(2px);
 }
-.content span{
+.col span{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -36,7 +35,7 @@
   text-align: center;
   transform: translate(-50%, -50%);
 }
-.news,.onlineshopping,.sports,.business{
+.news{
   color: black;
 }
 @media not all and (pointer: coarse) and (min-width: 1000px){

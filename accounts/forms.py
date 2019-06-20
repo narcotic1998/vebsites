@@ -6,7 +6,7 @@ from accounts.models import Profile
 from django.contrib import messages
 from django.utils.translation import ugettext as _
 from django.contrib.auth.forms import (
-UserCreationForm,UserChangeForm,AuthenticationForm
+UserCreationForm,UserChangeForm,AuthenticationForm,PasswordChangeForm
 )
 from zxcvbn_password import zxcvbn
 from zxcvbn_password.widgets import PasswordStrengthInput, PasswordConfirmationInput
@@ -147,6 +147,44 @@ class RegistrationForm(UserCreationForm):
             user.save()
 
         return User
+
+class ChangePasswordForm(PasswordChangeForm):
+
+    class Meta:
+        model = User
+        fields = [
+            'old_password',
+            'new_password1',
+            'new_password2',
+        ]
+
+    def clean_new_password2(self):
+        password = self.cleaned_data.get('old_password')
+        password1 = self.cleaned_data.get('new_password1')
+        password2 = self.cleaned_data.get('new_password2')       
+
+        if password1 != password2:
+            raise forms.ValidationError("Passwords did not match")
+
+        if len(password1)<8:
+            raise forms.ValidationError(
+            _('Password should be atleast 8 characters'),
+            code="Too Small"
+            )
+        if password1:
+            score = zxcvbn(password1)['score']
+            if score < 3:
+                raise forms.ValidationError(
+                _('Try a Strong Password'),
+                code="Too Weak"
+                )
+        if password1.isdigit():
+            raise forms.ValidationError(
+            _("Password can't be entirely numeric"),
+            code="Numeric"
+            )
+
+        return password2
 
 class EditProfileForm(UserChangeForm):
 

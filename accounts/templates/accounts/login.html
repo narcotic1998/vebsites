@@ -1,13 +1,8 @@
 {% extends "personal/header.html" %}
 {% block content %}
 {% load staticfiles %}
+{% include 'personal/includes/user_authentication.html' %}
 <link rel="stylesheet" href="{% static 'personal/css/style1.css' %}" type = "text/css"/>
-{% if user.is_authenticated %}
-<script>
-  alert('You are already Logged in');
-  window.location='/accounts/profile'
-  </script>
-{% else %}
 <br><br>
 <div class="box" id="LoginForm">
 <form class="" method="post">
@@ -19,6 +14,4 @@
   <a href="/accounts/forgot_password">forgot password</a>
 </form>
 <div>
-
-{% endif %}
 {% endblock %}

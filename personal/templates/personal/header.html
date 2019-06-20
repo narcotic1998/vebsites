@@ -1,8 +1,3 @@
-{% if user.is_authenticated %}
-<script type="text/javascript">
-	window.location = "{% url 'profile' %}";
-</script>
-{% endif %}
 <html>
 	<head>
 	<title>{{ title }}</title>
@@ -13,23 +8,36 @@
 	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type="text/css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script type="text/javascript" src="{% static 'personal/js/bootstrap.min.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'accounts/css/fixed-navbar.css' %}" type="text/css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="{% static 'accounts/css/topnav.css' %}" type="text/css" />
 	{% block js %}
 	{% endblock %}
 </head>
 <body>
-	<div class="fixed-navbar" id="fixed-navbar">
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-			<i class="fa fa-bars"></i></a>
-		<a class="vebsites" href="/"> Vebsites</a>
-		<a class="{{contact}}" href="{% url 'contact' %}"><i class="fa fa-fw fa-envelope fa-1x"></i> Contact us</a>
-		<div class="fixed-navbar-right">
-			<a class="{{login}}" href="{% url 'login' %}">Login <i class="fa fa-sign-in fa-1x"></i></a>
-			<a class="{{register}}" href="{% url 'register' %}">Register <i class="fa fa-user-plus"></i></a>
-			</div>
-
-	</div>
+	<nav class="navbar navbar-expand-sm navbar-fixed-top navbar-inverse bg-dark">
+  <a class="navbar-brand" href="/">Vebsites</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact' %}"><i class="fa fa-fw fa-envelope fa-1x"></i> Contact us</a>
+      </li>
+    </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-user" aria-hidden="true"></i>  Login/Register
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'login' %}">Login <i class="fa fa-sign-in fa-1x"></i></a>
+          <a class="dropdown-item" href="{% url 'register' %}">Register <i class="fa fa-user-plus"></i></a>
+		</div>
+      </li>
+    </ul>
+  </div>
+</nav>
 {% block content %}
 {% endblock %}
 {% if messages %}

@@ -1,8 +1,8 @@
 {% extends "personal/header.html" %}
 {% load staticfiles %}
 {% block content %}
+{% include 'personal/includes/user_authentication.html' %}
 <link rel="stylesheet" href="{% static 'personal/css/style1.css' %}" type = "text/css"/>
-
 <style>
 .progress{
   display: none;
