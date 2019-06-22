@@ -4,16 +4,26 @@
 	text-align: center;
 
 }
+.contact a{
+	text-decoration: none;
+	color: white;
+}
 .contact-method{
 	width: 220px;
 	height: 140px;
 	display: inline-block;
 	background: #3498db;
+	padding: 10px;
 	margin: 10px;
 	color: #fff;
 	position: relative;
 	cursor: pointer;
 	z-index: 1;
+	-webkit-transform: translateY(50%);
+	   -moz-transform: translateY(50%);
+	    -ms-transform: translateY(50%);
+	     -o-transform: translateY(50%);
+	        transform: translateY(50%);
 }
 .contact-method i{
 	position: absolute;

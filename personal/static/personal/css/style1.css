@@ -1,10 +1,8 @@
 .box{
   width: auto;
   height: auto;
-  padding: 5%;
   position: relative;
   left: 0%;
-  top: -6%;
   background: inherit;
   text-align: center;
 }
@@ -57,13 +55,11 @@
       font-size: 5vw;
     }
     #LoginForm{
-      position: absolute;
-      top: 10%;
+      position: relative;
       left: 4%;
     }
     #RegForm{
-      position: absolute;
-      top: 2%;
+      position: relative;
       left: 6%;
     }
     .box input[type = "text"],.box input[type = "password"],.box input[type = "email"]{ width: 140px;}
@@ -73,15 +69,6 @@
     .box input[type = "submit"]{padding: 10px 25px;}
 }
 @media screen and (orientation:landscape) and (min-width:600px) and (hover:none){
-  #LoginForm{
-    position: absolute;
-    top: 5%;
-    left: 35%;
-  }
-  #RegForm{
-    position: absolute;
-    left: 10%;
-  }
   .box h1{
     font-size: 5vw;
   }
