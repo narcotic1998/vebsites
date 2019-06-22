@@ -26,6 +26,9 @@
   filter: blur(2px);
 }
 .col span{
+  font-family: arial;
+  font-style: italic;
+  font-weight: 400;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,6 +36,8 @@
   font-size: 2.4vw;
   font-weight: bold;
   text-align: center;
+  text-shadow: 3px 3px 3px black;
+  letter-spacing: .5px;
   transform: translate(-50%, -50%);
 }
 .news{
@@ -46,6 +51,9 @@
   .content > div:hover > .content-img{
     filter: blur(0px);
   }
+  .content > div:hover > span{
+    letter-spacing: 2.5px;
+  }
 }
 @media screen and (max-width: 600px){
   .content{
@@ -54,14 +62,13 @@
     width: 100%;
     display: grid;
     grid-template-columns:100%;
-    grid-row-gap: 0;
     padding: 0;
   }
-  .content > div{
+  .col{
     width: 100%;
     padding: 0;
   }
-  .centered{
+  .col span{
     font-size: 10vw;
   }
   .content-img{
