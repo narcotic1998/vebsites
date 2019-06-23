@@ -2,10 +2,10 @@
   position: relative;
   left: 1%;
   width: 95%;
-  height: 45%;
+  height: auto;
+  min-height: calc(100vh -10vh -20px);
   display: grid;
   grid-template-columns:repeat(3,1fr);
-  grid-column-gap: .5em;
   grid-auto-rows: minmax(42vh,auto);
   justify-items:center;
   align-items: center;
