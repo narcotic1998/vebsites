@@ -1,8 +1,12 @@
 body{
     margin-top: 10vh;
   }
+.main {
+  min-height: 59.2vh;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
 .navbar{
-  height: 1vh;
   background-color: black;
 }
 .navbar > .navbar-brand{
@@ -24,8 +28,15 @@ body{
   font-size: 20px;
 }
 .page-footer {
+  padding-top: -100px;
   background: #343A40;
   color: white;
+}
+@media screen and (max-width: 600px)
+{
+  .main {
+    min-height: 30.9vh;
+  }
 }
 @media screen and (orientation:landscape) and (min-width:600px) and (hover:none){
   .navbar{

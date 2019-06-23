@@ -38,7 +38,7 @@
           <i class="fa fa-user" aria-hidden="true"></i>   {{ user.username }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{% url 'info' %}"><i class="fa fa-fw fa-user-circle-o fa-1x"></i> My Account</a>
+          <a class="dropdown-item" href="{% url 'info' %}">My Account</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{% url 'logout' %}">Logout <i class="fa fa-sign-out fa-1x"></i></a>
         </div>
@@ -46,8 +46,83 @@
     </ul>
   </div>
 </nav>
+<div class="main">
 {% block content %}
 {% endblock %}
+</div>
+<footer class="page-footer font-small blue pt-4">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">Vebsites</h5>
+        <p>This is a place to view some of the cool and underrated websites for your day-to-day activities</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Quick Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Electronics</a>
+          </li>
+          <li>
+            <a href="#!">Music</a>
+          </li>
+          <li>
+            <a href="#!">Cricket</a>
+          </li>
+          <li>
+            <a href="#!">Politics</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Website of the Day</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="/">Vebsites</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="/"> Vebsites</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 {% else %}
 <script>
 alert("You must Login to view content ");
