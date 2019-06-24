@@ -10,7 +10,7 @@
     <img class="content-img" src="{% static 'vebsites/img/entertainment.jpg' %}">
     <span class="entertainment">ENTERTAINMENT</span>
   </div>
-  <div class="col" onclick="window.location='';">
+  <div class="col" onclick="window.location='{% url 'news:home' %}';">
     <img class="content-img" src="{% static 'vebsites/img/news.png' %}">
     <span class="news">NEWS</span>
   </div>
@@ -18,7 +18,7 @@
     <img class="content-img" src="{% static 'vebsites/img/sports.jpg' %}">
     <span class="sports">SPORTS</span>
   </div>
-  <div class="col" onclick="window.location='';">
+  <div class="col" onclick="window.location='{% url 'education:home' %}';">
     <img class="content-img" src="{% static 'vebsites/img/education.jpg' %}">
     <span class="education">Education</span>
   </div>

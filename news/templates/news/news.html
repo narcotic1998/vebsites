@@ -1,0 +1,23 @@
+{% extends 'personal/header_accounts.html' %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'vebsites/css/content.css' %}" type="text/css" />
+<div class="content">
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'news/img/national.jpg' %}">
+    <span class="national">National News</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'news/img/international.jpg' %}">
+    <span class="international">InterNational News</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'news/img/technology.jpg' %}">
+    <span class="technology">Technology</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'news/img/politics.jpg' %}">
+    <span class="politics">Politics</span>
+  </div>
+</div>
+{% endblock %}

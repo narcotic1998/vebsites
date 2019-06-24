@@ -1,0 +1,31 @@
+{% extends 'personal/header_accounts.html' %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'vebsites/css/content.css' %}" type="text/css" />
+<div class="content">
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'education/img/school.jpg' %}">
+    <span class="school">School</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'education/img/college.jpg' %}">
+    <span class="college">College</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'education/img/knowledge.jpg' %}">
+    <span class="knowledge">Knowledge</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'education/img/science.jpg' %}">
+    <span class="science">Science</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'education/img/programming.jpg' %}">
+    <span class="programming">Programming</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'education/img/medical.jpg' %}">
+    <span class="medical">Medical</span>
+  </div>
+</div>
+{% endblock %}

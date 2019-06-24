@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'sports/', include('sports.urls',namespace="sports")),
     url(r'booking/', include('booking.urls',namespace="booking")),
     url(r'education/', include('education.urls',namespace="education")),
+    url(r'news/', include('news.urls',namespace="news")),
 ]

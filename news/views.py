@@ -3,8 +3,8 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 
-def education(request):
+def news(request):
     context = {
-        "title":"Education"
+        "title":"News"
     }
-    return render(request,"education/education.html",context)
+    return render(request,"news/news.html",context)

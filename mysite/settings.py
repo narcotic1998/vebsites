@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'sports',
     'booking',
     'education',
+    'news',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
