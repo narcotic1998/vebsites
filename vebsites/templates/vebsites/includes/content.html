@@ -14,9 +14,9 @@
     <img class="content-img" src="{% static 'vebsites/img/news.png' %}">
     <span class="news">NEWS</span>
   </div>
-  <div class="col" onclick="window.location='';">
+  <div class="col" onclick="window.location='{% url 'sports:home' %}';">
     <img class="content-img" src="{% static 'vebsites/img/sports.jpg' %}">
-    <span class="sports">SPORTS</p>
+    <span class="sports">SPORTS</span>
   </div>
   <div class="col" onclick="window.location='';">
     <img class="content-img" src="{% static 'vebsites/img/education.jpg' %}">

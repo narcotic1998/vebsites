@@ -4,4 +4,5 @@ from . import views
 urlpatterns = [
     url(r'online-shopping/$', include('onlineshopping.urls',namespace="onlineshopping")),
     url(r'entertainment/$', include('entertainment.urls',namespace="entertainment")),
+    url(r'sports/$', include('sports.urls',namespace="sports")),
 ]

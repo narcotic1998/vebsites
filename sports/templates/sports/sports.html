@@ -1,0 +1,31 @@
+{% extends 'personal/header_accounts.html' %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'vebsites/css/content.css' %}" type="text/css" />
+<div class="content">
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'sports/img/football.jpg' %}">
+    <span class="football">Football</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'sports/img/basket_ball.jpg' %}">
+    <span class="basket_ball">Basket Ball</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'sports/img/cricket.png' %}">
+    <span class="cricket">Cricket</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'sports/img/tennis.jpg' %}">
+    <span class="tennis">Tennis</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'sports/img/rugby.jpg' %}">
+    <span class="rugby">Rugby</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'sports/img/hockey.jpg' %}">
+    <span class="hockey">Hockey</span>
+  </div>
+</div>
+{% endblock %}

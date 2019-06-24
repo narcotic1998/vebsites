@@ -67,11 +67,11 @@ def change_password(request):
             form.save()
             django_logout(request)
             messages.info(request,"Password Changed Successfully, Please Login again!!")
-            return render(request,"accounts/login.html",context)
+            return redirect(reverse('login'))
 
     else:
         form = ChangePasswordForm(user=request.user)
-        
+
     context = {"title":"Change Password","info":"active","form":form}
     return render(request,"accounts/change_password.html",context)
 
