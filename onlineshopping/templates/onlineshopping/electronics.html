@@ -1,0 +1,31 @@
+{% extends 'personal/header_accounts.html' %}
+{% block content %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'vebsites/css/content.css' %}" type="text/css" />
+<div class="content">
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'electronics/img/mobile.jpg' %}">
+    <span class="mobiles">Mobiles</span>
+    </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'electronics/img/laptop.jpg' %}">
+    <span class="laptops">Laptops</span>
+    </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'electronics/img/camera.jpg' %}">
+    <span class="camera">Camera</span>
+    </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'electronics/img/mobile_accessories.jpg' %}">
+    <span class="mobile_accessories">Mobile Accessories</span>
+    </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'electronics/img/laptop_accessories.jpeg' %}">
+    <span class="laptop_accessories">Laptop Accessories</span>
+    </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'electronics/img/camera_accessories.jpg' %}">
+    <span class="camera_accessories">Camera Accessories</span>
+  </div>
+  </div>
+{% endblock %}
