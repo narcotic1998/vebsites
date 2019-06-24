@@ -10,3 +10,9 @@ def electronics(request):
         "title":"Electronics"
     }
     return render(request,"onlineshopping/electronics.html",context)
+
+def fashion(request):
+    context = {
+        "title":"Fashion"
+    }
+    return render(request,"onlineshopping/fashion.html",context)

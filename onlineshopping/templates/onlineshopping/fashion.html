@@ -1,0 +1,19 @@
+{% extends 'personal/header_accounts.html' %}
+{% block content %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'vebsites/css/content.css' %}" type="text/css" />
+<div class="content">
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'fashion/img/men.webp' %}">
+    <span class="men">Men</span>
+  </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'fashion/img/women.webp' %}">
+    <span class="women">Women</span>
+  </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'fashion/img/kids.jpg' %}">
+    <span class="kids">Kids</span>
+  </div>
+</div>
+{% endblock %}
