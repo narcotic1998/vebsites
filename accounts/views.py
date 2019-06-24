@@ -14,7 +14,7 @@ def login_user(request):
         user = authenticate(request,username=username, password=password)
         if user:
             login(request,user)
-            return redirect(reverse("profile"))
+            return redirect(reverse("vebsites"))
         else:
             context = {"username":username,"title":"Login","login":"active"}
             messages.info(request,"Incorrect Username or Password")
@@ -35,10 +35,6 @@ def register(request):
 
     context = {"title":"Register","register":"active","form":form}
     return render(request,"accounts/register.html",context)
-
-def profile(request):
-        context = {"title":"Profile","user":request.user,"dashboard":"active"}
-        return render(request,"accounts/profile.html",context)
 
 def info(request):
     context = {"info":"active","title":"My Account"}

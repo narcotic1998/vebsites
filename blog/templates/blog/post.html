@@ -1,8 +1,0 @@
-{% extends "personal/header.html" %}
-{% block content %}
-    <center>
-    <h1><font color="blue">{{post.title}}</h1></font>
-    <h5>on {{post.date|date:"d-m-Y"}}</h5>
-    <h6>{{post.body|safe|linebreaks}}</h6>
-    </center>
-{% endblock %}

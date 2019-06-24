@@ -3,4 +3,8 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 
-# Create your views here.
+def vebsites(request):
+    context = {
+        "title":"Vebsites"
+    }
+    return render(request,"vebsites/vebsites.html",context)

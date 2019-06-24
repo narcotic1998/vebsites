@@ -1,0 +1,39 @@
+{% extends 'personal/header_accounts.html' %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'vebsites/css/content.css' %}" type="text/css" />
+<div class="content">
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'booking/img/hotels.jpg' %}">
+    <span class="hotels">Hotels</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'entertainment/img/movies.png' %}">
+    <span class="movie">Movie</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'booking/img/rental.jpg' %}">
+    <span class="rental">Rental</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'booking/img/train.jpg' %}">
+    <span class="train">Train</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'booking/img/bus.jpg' %}">
+    <span class="bus">Bus</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'booking/img/cab.jpeg' %}">
+    <span class="cab">Cab</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'booking/img/flights.jpg' %}">
+    <span class="flight">Flight</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'booking/img/bike.jpg' %}">
+    <span class="bike">Bike Taxi</span>
+  </div>
+</div>
+{% endblock %}
