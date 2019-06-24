@@ -1,0 +1,27 @@
+{% extends 'personal/header_accounts.html' %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'vebsites/css/content.css' %}" type="text/css" />
+<div class="content">
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'entertainment/img/music.jpg' %}">
+    <span class="music">Music</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'entertainment/img/movies.png' %}">
+    <span class="movies">Movies</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'entertainment/img/video.jpg' %}">
+    <span class="videos">Videos</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'entertainment/img/games.jpg' %}">
+    <span class="games">Games</span>
+  </div>
+  <div class="col" onclick="window.location='';">
+    <img class="content-img" src="{% static 'entertainment/img/television.jpg' %}">
+    <span class="television">Television</span>
+  </div>
+</div>
+{% endblock %}

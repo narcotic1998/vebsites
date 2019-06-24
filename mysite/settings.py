@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'vebsites',
     'onlineshopping',
     'accounts',
+    'entertainment',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
