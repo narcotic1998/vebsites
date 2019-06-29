@@ -16,3 +16,9 @@ def fashion(request):
         "title":"Fashion"
     }
     return render(request,"onlineshopping/fashion.html",context)
+
+def homeappliances(request):
+    context = {
+        "title":"Home Appliances"
+    }
+    return render(request,"onlineshopping/homeappliances.html",context)

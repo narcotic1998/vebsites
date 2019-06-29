@@ -1,0 +1,43 @@
+{% extends 'personal/header_accounts.html' %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'vebsites/css/content.css' %}" type="text/css" />
+<div class="content">
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'homeappliances/img/television.jpg' %}">
+    <span class="television">Television</span>
+  </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'homeappliances/img/washingmachine.jpg' %}">
+    <span class="washing-machine">Washing Machine</span>
+  </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'homeappliances/img/refridgerator.webp' %}">
+    <span class="refridegerator">Refridgerator</span>
+  </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'homeappliances/img/airconditioner.jpg' %}">
+    <span class="air-conditioner">Air Conditioner</span>
+  </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'homeappliances/img/fan.jpg' %}">
+    <span class="fans">Fans</span>
+  </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'homeappliances/img/oven.png' %}">
+    <span class="oven">Microwave Oven</span>
+  </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'homeappliances/img/vacuum.jpg' %}">
+    <span class="vacuumcleaner">Vacuum Cleaner</span>
+  </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'homeappliances/img/mixer-grinder.jpg' %}">
+    <span class="mixer-grinders">Mixer Grinder</span>
+  </div>
+  <div class="col" onclick="window.location='{% url 'onlineshopping:electronics' %}';">
+    <img class="content-img" src="{% static 'electronics/img/used.jpg' %}">
+    <span class="used_refurbished">Used</span>
+  </div>
+</div>
+{% endblock %}

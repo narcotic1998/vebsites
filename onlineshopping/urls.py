@@ -5,4 +5,5 @@ urlpatterns = [
     url(r'^$', views.online_shopping,name="home"),
     url(r'electronics/$',views.electronics,name="electronics"),
     url(r'fashion/$',views.fashion,name="fashion"),
+    url(r'home-appliances',views.homeappliances,name="homeappliances"),
 ]

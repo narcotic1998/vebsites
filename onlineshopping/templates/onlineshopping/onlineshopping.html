@@ -11,7 +11,7 @@
     <img class="content-img" src="{% static 'onlineshopping/img/fashion.png' %}">
     <span class="centered">FASHION</span>
   </div>
-  <div class="col" onclick="window.location='/vebsites/online-shopping/';">
+  <div class="col" onclick="window.location='{% url 'onlineshopping:homeappliances' %}';">
     <img class="content-img" src="{% static 'onlineshopping/img/homeappliances.jpg' %}">
     <span class="centered">HOME APPLIANCES</span>
   </div>

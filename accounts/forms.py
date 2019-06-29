@@ -82,7 +82,7 @@ class RegistrationForm(UserCreationForm):
             code="Numeric"
             )
         if re.match(r"^(?=.{5,15}$)",username)==None:
-            if len(u)<5:
+            if len(username)<5:
                 print("less than 5 characters")
                 raise forms.ValidationError(
                 _("Username less than 5 characters"),
@@ -161,7 +161,7 @@ class ChangePasswordForm(PasswordChangeForm):
     def clean_new_password2(self):
         password = self.cleaned_data.get('old_password')
         password1 = self.cleaned_data.get('new_password1')
-        password2 = self.cleaned_data.get('new_password2')       
+        password2 = self.cleaned_data.get('new_password2')
 
         if password1 != password2:
             raise forms.ValidationError("Passwords did not match")
