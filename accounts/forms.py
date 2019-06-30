@@ -16,7 +16,7 @@ YEARS =[x for x in range(1950,2002)]
 class RegistrationForm(UserCreationForm):
     username = forms.CharField(max_length=50,widget=forms.TextInput(attrs={'placeholder': 'Username'}))
     first_name = forms.CharField(required=True,widget=forms.TextInput(attrs={'placeholder': 'First name'}))
-    last_name = forms.CharField(required=True,widget=forms.TextInput(attrs={'placeholder': 'Last name'}))
+    last_name = forms.CharField(required=False,widget=forms.TextInput(attrs={'placeholder': 'Last name'}))
     email = forms.EmailField(required=True,widget=forms.TextInput(attrs={'placeholder': 'Email'}))
     password1 = forms.CharField(label="Password",widget=PasswordStrengthInput(attrs={'placeholder': 'Password'}))
     password2 = forms.CharField(label="Password",widget=PasswordConfirmationInput(attrs={'placeholder': 'Re-enter Password'},confirm_with='password1'))

@@ -137,6 +137,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+AUTHENTICATION_BACKENDS = ['accounts.tests.CustomBackend']
 
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
